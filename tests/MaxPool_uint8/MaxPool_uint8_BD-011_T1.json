@@ -1,0 +1,157 @@
+{
+  "id": "MaxPool_uint8_BD-011_T1",
+  "operator": "MaxPool",
+  "dtype": "uint8",
+  "spec_ref": "specs/maxpool.md -- SONNX MaxPool (ONNX MaxPool v22): restrictions R1-R5, constraints pads-C2 (Keff_less_than_pads), Y-C1 (shape_consist), kernel_shape-C1, dilations-C1, strides-C1, X-C1 (C1ia), Indices-C1",
+  "kind": "auxiliary-boundary",
+  "class_id": "BD-011",
+  "class": "single-element output on axis 2 ($dY_2 = 1$)",
+  "class_predicates": [
+    "Y-C1"
+  ],
+  "traceability": [
+    "dY2 = 1"
+  ],
+  "value_template": {
+    "id": "T1",
+    "name": "distinct values (index observability)"
+  },
+  "attributes": {
+    "kernel_shape": [
+      3,
+      1
+    ],
+    "strides": [
+      3,
+      1
+    ],
+    "dilations": [
+      2,
+      1
+    ],
+    "pads": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "auto_pad": "NOTSET",
+    "ceil_mode": 0,
+    "storage_order": 0
+  },
+  "input": {
+    "shape": [
+      1,
+      1,
+      7,
+      8
+    ],
+    "values": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      [
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      [
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56
+      ]
+    ]
+  },
+  "expected": {
+    "shape": [
+      1,
+      1,
+      1,
+      8
+    ],
+    "Y": [
+      [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ]
+    ],
+    "Indices": [
+      [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ]
+    ]
+  },
+  "criterion": "criterion 5: functional specification (output-size boundary values)",
+  "retention_reason": "usage-limit / value-domain boundary: base-choice complement of the p'/p'' split system",
+  "priority": 2
+}

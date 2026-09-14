@@ -1,0 +1,139 @@
+{
+  "id": "MaxPool_int8_BD-002_T3",
+  "operator": "MaxPool",
+  "dtype": "int8",
+  "spec_ref": "specs/maxpool.md -- SONNX MaxPool (ONNX MaxPool v22): restrictions R1-R5, constraints pads-C2 (Keff_less_than_pads), Y-C1 (shape_consist), kernel_shape-C1, dilations-C1, strides-C1, X-C1 (C1ia), Indices-C1",
+  "kind": "auxiliary-boundary",
+  "class_id": "BD-002",
+  "class": "minimum spatial size on axis 3 ($dX_3 = 1$)",
+  "class_predicates": [
+    "USAGE-X-size"
+  ],
+  "traceability": [
+    "dX3 = 1"
+  ],
+  "value_template": {
+    "id": "T3",
+    "name": "pad-constant tensor (padding/max interplay)"
+  },
+  "attributes": {
+    "kernel_shape": [
+      1,
+      1
+    ],
+    "strides": [
+      1,
+      1
+    ],
+    "dilations": [
+      1,
+      1
+    ],
+    "pads": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "auto_pad": "NOTSET",
+    "ceil_mode": 0,
+    "storage_order": 0
+  },
+  "input": {
+    "shape": [
+      1,
+      1,
+      8,
+      1
+    ],
+    "values": [
+      [
+        -128
+      ],
+      [
+        -128
+      ],
+      [
+        -128
+      ],
+      [
+        -128
+      ],
+      [
+        -128
+      ],
+      [
+        -128
+      ],
+      [
+        -128
+      ],
+      [
+        -128
+      ]
+    ]
+  },
+  "expected": {
+    "shape": [
+      1,
+      1,
+      8,
+      1
+    ],
+    "Y": [
+      [
+        -128
+      ],
+      [
+        -128
+      ],
+      [
+        -128
+      ],
+      [
+        -128
+      ],
+      [
+        -128
+      ],
+      [
+        -128
+      ],
+      [
+        -128
+      ],
+      [
+        -128
+      ]
+    ],
+    "Indices": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        6
+      ],
+      [
+        7
+      ]
+    ]
+  },
+  "criterion": "criterion 4: operator pre-conditions (usage-domain / value-domain bounds)",
+  "retention_reason": "usage-limit / value-domain boundary: base-choice complement of the p'/p'' split system; raised to tier 1 as a dependency-flagged combined boundary case (template T3, cross-domain dependency check)",
+  "priority": 1
+}

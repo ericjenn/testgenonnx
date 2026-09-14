@@ -1,0 +1,51 @@
+{
+  "MaxPool": {
+    "spec_file": "/run/media/eric/Data/Work/gits/testgenonnx/specs/maxpool.md",
+    "dtypes": [
+      "float16",
+      "float",
+      "double",
+      "int8",
+      "uint8"
+    ],
+    "directories": [
+      "tests/MaxPool_float16",
+      "tests/MaxPool_float",
+      "tests/MaxPool_double",
+      "tests/MaxPool_int8",
+      "tests/MaxPool_uint8"
+    ],
+    "equivalence_classes": 144,
+    "auxiliary_classes": 15,
+    "unsatisfiable": 0,
+    "pruned": 112,
+    "backend": "z3",
+    "mutation_testing": {
+      "float16": {
+        "tests": 194,
+        "mutants": 5,
+        "survivors": []
+      },
+      "float": {
+        "tests": 194,
+        "mutants": 5,
+        "survivors": []
+      },
+      "double": {
+        "tests": 194,
+        "mutants": 5,
+        "survivors": []
+      },
+      "int8": {
+        "tests": 194,
+        "mutants": 5,
+        "survivors": []
+      },
+      "uint8": {
+        "tests": 194,
+        "mutants": 5,
+        "survivors": []
+      }
+    }
+  }
+}

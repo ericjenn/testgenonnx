@@ -1,0 +1,105 @@
+{
+  "id": "MaxPool_uint8_BD-010_T2",
+  "operator": "MaxPool",
+  "dtype": "uint8",
+  "spec_ref": "specs/maxpool.md -- SONNX MaxPool (ONNX MaxPool v22): restrictions R1-R5, constraints pads-C2 (Keff_less_than_pads), Y-C1 (shape_consist), kernel_shape-C1, dilations-C1, strides-C1, X-C1 (C1ia), Indices-C1",
+  "kind": "auxiliary-boundary",
+  "class_id": "BD-010",
+  "class": "empty output on axis 2 ($dY_2 = 0$): kernel within one stride of fitting, the floor formula yields 0",
+  "class_predicates": [
+    "Y-C1"
+  ],
+  "traceability": [
+    "dY2 = 0"
+  ],
+  "value_template": {
+    "id": "T2",
+    "name": "all-ties (tie-break of Indices)"
+  },
+  "attributes": {
+    "kernel_shape": [
+      3,
+      1
+    ],
+    "strides": [
+      1,
+      1
+    ],
+    "dilations": [
+      2,
+      1
+    ],
+    "pads": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "auto_pad": "NOTSET",
+    "ceil_mode": 0,
+    "storage_order": 0
+  },
+  "input": {
+    "shape": [
+      1,
+      1,
+      4,
+      8
+    ],
+    "values": [
+      [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ]
+    ]
+  },
+  "expected": {
+    "shape": [
+      1,
+      1,
+      0,
+      8
+    ],
+    "Y": [],
+    "Indices": []
+  },
+  "criterion": "criterion 5: functional specification (output-size boundary values)",
+  "retention_reason": "usage-limit / value-domain boundary: base-choice complement of the p'/p'' split system",
+  "priority": 2
+}

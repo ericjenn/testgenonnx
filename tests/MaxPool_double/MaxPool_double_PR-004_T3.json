@@ -1,0 +1,307 @@
+{
+  "id": "MaxPool_double_PR-004_T3",
+  "operator": "MaxPool",
+  "dtype": "double",
+  "spec_ref": "specs/maxpool.md -- SONNX MaxPool (ONNX MaxPool v22): restrictions R1-R5, constraints pads-C2 (Keff_less_than_pads), Y-C1 (shape_consist), kernel_shape-C1, dilations-C1, strides-C1, X-C1 (C1ia), Indices-C1",
+  "kind": "auxiliary-property",
+  "class_id": "PR-004",
+  "class": "asymmetric padding on axis 3 ($p_1 \\ne p_3$)",
+  "class_predicates": [
+    "pads-C2[axis3]"
+  ],
+  "traceability": [
+    "p1 != p3"
+  ],
+  "value_template": {
+    "id": "T3",
+    "name": "pad-constant tensor (padding/max interplay)"
+  },
+  "attributes": {
+    "kernel_shape": [
+      1,
+      2
+    ],
+    "strides": [
+      1,
+      1
+    ],
+    "dilations": [
+      1,
+      1
+    ],
+    "pads": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "auto_pad": "NOTSET",
+    "ceil_mode": 0,
+    "storage_order": 0
+  },
+  "input": {
+    "shape": [
+      1,
+      1,
+      8,
+      8
+    ],
+    "values": [
+      [
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf"
+      ],
+      [
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf"
+      ],
+      [
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf"
+      ],
+      [
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf"
+      ],
+      [
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf"
+      ],
+      [
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf"
+      ],
+      [
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf"
+      ],
+      [
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf"
+      ]
+    ]
+  },
+  "expected": {
+    "shape": [
+      1,
+      1,
+      8,
+      8
+    ],
+    "Y": [
+      [
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf"
+      ],
+      [
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf"
+      ],
+      [
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf"
+      ],
+      [
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf"
+      ],
+      [
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf"
+      ],
+      [
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf"
+      ],
+      [
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf"
+      ],
+      [
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf",
+        "-inf"
+      ]
+    ],
+    "Indices": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ]
+    ]
+  },
+  "criterion": "criterion 5: functional specification (explicit symmetry property between parameters)",
+  "retention_reason": "explicit symmetry/asymmetry property: named interaction risk (strategy: 'Symmetry and asymmetry'); raised to tier 1 as a dependency-flagged combined boundary case (template T3, cross-domain dependency check)",
+  "priority": 1
+}

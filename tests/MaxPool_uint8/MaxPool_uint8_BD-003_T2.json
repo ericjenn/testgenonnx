@@ -1,0 +1,307 @@
+{
+  "id": "MaxPool_uint8_BD-003_T2",
+  "operator": "MaxPool",
+  "dtype": "uint8",
+  "spec_ref": "specs/maxpool.md -- SONNX MaxPool (ONNX MaxPool v22): restrictions R1-R5, constraints pads-C2 (Keff_less_than_pads), Y-C1 (shape_consist), kernel_shape-C1, dilations-C1, strides-C1, X-C1 (C1ia), Indices-C1",
+  "kind": "auxiliary-boundary",
+  "class_id": "BD-003",
+  "class": "maximum usage-limit spatial size ($dX_2 = 8$)",
+  "class_predicates": [
+    "USAGE-X-size"
+  ],
+  "traceability": [
+    "dX2 = 8"
+  ],
+  "value_template": {
+    "id": "T2",
+    "name": "all-ties (tie-break of Indices)"
+  },
+  "attributes": {
+    "kernel_shape": [
+      1,
+      1
+    ],
+    "strides": [
+      1,
+      1
+    ],
+    "dilations": [
+      1,
+      1
+    ],
+    "pads": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "auto_pad": "NOTSET",
+    "ceil_mode": 0,
+    "storage_order": 0
+  },
+  "input": {
+    "shape": [
+      1,
+      1,
+      8,
+      8
+    ],
+    "values": [
+      [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ]
+    ]
+  },
+  "expected": {
+    "shape": [
+      1,
+      1,
+      8,
+      8
+    ],
+    "Y": [
+      [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ]
+    ],
+    "Indices": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ]
+    ]
+  },
+  "criterion": "criterion 4: operator pre-conditions (usage-domain / value-domain bounds)",
+  "retention_reason": "usage-limit / value-domain boundary: base-choice complement of the p'/p'' split system",
+  "priority": 2
+}

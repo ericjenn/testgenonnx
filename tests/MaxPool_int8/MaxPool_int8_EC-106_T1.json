@@ -1,0 +1,211 @@
+{
+  "id": "MaxPool_int8_EC-106_T1",
+  "operator": "MaxPool",
+  "dtype": "int8",
+  "spec_ref": "specs/maxpool.md -- SONNX MaxPool (ONNX MaxPool v22): restrictions R1-R5, constraints pads-C2 (Keff_less_than_pads), Y-C1 (shape_consist), kernel_shape-C1, dilations-C1, strides-C1, X-C1 (C1ia), Indices-C1",
+  "kind": "equivalence-class",
+  "class_id": "EC-106",
+  "class": "p'_1 \u2227 p''_2 \u2227 p''_3 \u2227 p''_4 \u2227 p'_5 \u2227 p''_6 \u2227 p''_7 \u2227 p'_8 (p0 = d0 * (dW0 - 1) + 1 - 1 \u2227 p2 < d0 * (dW0 - 1) + 1 - 1 \u2227 p1 < d1 * (dW1 - 1) + 1 - 1 \u2227 p3 < d1 * (dW1 - 1) + 1 - 1 \u2227 (dY2 - 1) * s0 + d0 * (dW0 - 1) + 1 = dX2 + p0 + p2 \u2227 dX2 + p0 + p2 < dY2 * s0 + d0 * (dW0 - 1) + 1 - 1 \u2227 (dY3 - 1) * s1 + d1 * (dW1 - 1) + 1 < dX3 + p1 + p3 \u2227 dX3 + p1 + p3 = dY3 * s1 + d1 * (dW1 - 1) + 1 - 1)",
+  "class_predicates": [
+    "pads-C2[axis2-begin]",
+    "pads-C2[axis2-end]",
+    "pads-C2[axis3-begin]",
+    "pads-C2[axis3-end]",
+    "Y-C1[axis2-fits]",
+    "Y-C1[axis2-overflows]",
+    "Y-C1[axis3-fits]",
+    "Y-C1[axis3-overflows]"
+  ],
+  "traceability": [
+    "p0 = d0 * (dW0 - 1) + 1 - 1",
+    "p2 < d0 * (dW0 - 1) + 1 - 1",
+    "p1 < d1 * (dW1 - 1) + 1 - 1",
+    "p3 < d1 * (dW1 - 1) + 1 - 1",
+    "(dY2 - 1) * s0 + d0 * (dW0 - 1) + 1 = dX2 + p0 + p2",
+    "dX2 + p0 + p2 < dY2 * s0 + d0 * (dW0 - 1) + 1 - 1",
+    "(dY3 - 1) * s1 + d1 * (dW1 - 1) + 1 < dX3 + p1 + p3",
+    "dX3 + p1 + p3 = dY3 * s1 + d1 * (dW1 - 1) + 1 - 1"
+  ],
+  "value_template": {
+    "id": "T1",
+    "name": "distinct values (index observability)"
+  },
+  "attributes": {
+    "kernel_shape": [
+      2,
+      2
+    ],
+    "strides": [
+      2,
+      2
+    ],
+    "dilations": [
+      2,
+      2
+    ],
+    "pads": [
+      2,
+      0,
+      1,
+      0
+    ],
+    "auto_pad": "NOTSET",
+    "ceil_mode": 0,
+    "storage_order": 0
+  },
+  "input": {
+    "shape": [
+      1,
+      1,
+      8,
+      8
+    ],
+    "values": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      [
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      [
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56
+      ],
+      [
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ]
+    ]
+  },
+  "expected": {
+    "shape": [
+      1,
+      1,
+      5,
+      3
+    ],
+    "Y": [
+      [
+        3,
+        5,
+        7
+      ],
+      [
+        19,
+        21,
+        23
+      ],
+      [
+        35,
+        37,
+        39
+      ],
+      [
+        51,
+        53,
+        55
+      ],
+      [
+        51,
+        53,
+        55
+      ]
+    ],
+    "Indices": [
+      [
+        2,
+        4,
+        6
+      ],
+      [
+        18,
+        20,
+        22
+      ],
+      [
+        34,
+        36,
+        38
+      ],
+      [
+        50,
+        52,
+        54
+      ],
+      [
+        50,
+        52,
+        54
+      ]
+    ]
+  },
+  "criterion": "criterion 4: operator pre-conditions + criterion 5: functional specification",
+  "retention_reason": "boundary/vertex class, retained by the exhaustive p'/p'' decomposition (no pruning record matched)",
+  "priority": 2
+}
