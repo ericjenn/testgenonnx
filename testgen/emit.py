@@ -391,9 +391,10 @@ def _report(op: Operator, result: ClassifyResult, dtype: str,
         ["functional tests generated", len(functional)],
         ["materializations refused (specification gaps)", len(gaps)],
     ]))
+    out_names = ", ".join(op.outputs) if op.outputs else "the operator's"
     a("Test cases are JSON files next to this report; each carries its "
       "own traceability tags, class description, input tensor and "
-      "expected outputs (Y, Indices) computed by the reference "
+      f"expected outputs ({out_names}) computed by the reference "
       "implementation of the informal specification.\n")
     return "\n".join(lines)
 

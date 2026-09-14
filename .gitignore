@@ -1,0 +1,14 @@
+# Python bytecode caches
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Generated test trees (regenerate with: python -m testgen.cli)
+# tests/
+
+# OS / editor noise
+.DS_Store
+*.swp

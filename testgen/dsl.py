@@ -492,6 +492,9 @@ class Operator:
     dependencies: List[Dependency] = field(default_factory=list)
     # Free-form notes recorded in the manifest.
     notes: List[str] = field(default_factory=list)
+    # Names of the expected outputs the materializer emits for this
+    # operator (rendered in the report prose; e.g. ["Y", "Indices"]).
+    outputs: List[str] = field(default_factory=list)
 
 
 def vars_of(*exprs: Union[Expr, Var, Predicate]) -> List[Var]:

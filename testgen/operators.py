@@ -216,6 +216,7 @@ maxpool = Operator(
              "restrictions R1-R5, constraints pads-C2 (Keff_less_than_pads), "
              "Y-C1 (shape_consist), kernel_shape-C1, dilations-C1, "
              "strides-C1, X-C1 (C1ia), Indices-C1",
+    outputs=["Y", "Indices"],
     params={
         # One test set per data type supported by the spec (generated
         # separately, per user requirement). Padding constant per spec:

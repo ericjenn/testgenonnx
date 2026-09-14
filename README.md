@@ -21,7 +21,7 @@ Design rationale and internals: [`DESIGN.md`](DESIGN.md).
 
 ```sh
 python -m venv ~/Venvs/testgenonnx
-~/Venvs/testgenonnx/bin/pip install z3-solver
+~/Venvs/testgenonnx/bin/pip install -r requirements.txt
 ```
 
 ## Usage
